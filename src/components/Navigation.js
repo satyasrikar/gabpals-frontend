@@ -5,7 +5,14 @@ const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
       <Container>
-        <Navbar.Brand>Gabpals</Navbar.Brand>
+        <Navbar.Brand className="align-items-center">
+          <img
+            src="images/gabpals-invert.png"
+            alt=""
+            style={{ width: "1.5rem", marginInline: "0.5rem" }}
+          />
+          <span>Gabpals</span>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
