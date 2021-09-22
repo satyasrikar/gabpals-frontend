@@ -9,7 +9,7 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>Models</Nav.Link>
+            <Nav.Link>Agents</Nav.Link>
             <Nav.Link>Pricing</Nav.Link>
             <NavDropdown title="More" id="collasible-nav-dropdown">
               <NavDropdown.Item>Register as Agent</NavDropdown.Item>
@@ -19,6 +19,14 @@ const Navigation = () => {
               <NavDropdown.Item>Gabpals Global</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          {/* <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input
+              type="search"
+              class="form-control form-control-dark"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form> */}
           <Nav>
             <Nav.Link>Buy Coins</Nav.Link>
             <Nav.Link eventKey={2}>Login</Nav.Link>

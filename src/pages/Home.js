@@ -6,15 +6,13 @@ import Login from "./Login";
 
 const Home = () => {
   return (
-    <div>
-      <Router>
-        <Navigation />
-        <Switch>
-          <Route path="/" exact component={Landing}></Route>
-          <Route path="/login" exact component={Login}></Route>
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Navigation />
+      <Switch>
+        <Route path="/" exact component={Landing}></Route>
+        <Route path="/login" exact component={Login}></Route>
+      </Switch>
+    </Router>
   );
 };
 
