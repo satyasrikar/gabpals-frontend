@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -36,7 +37,12 @@ const Navigation = () => {
           </form> */}
           <Nav>
             <Nav.Link>Buy Coins</Nav.Link>
-            <Nav.Link eventKey={2}>Login</Nav.Link>
+            <Nav.Link eventKey={2}>
+              <NavLink to="/login">Login</NavLink>
+            </Nav.Link>
+            <Nav.Link eventKey={3}>
+              <NavLink to="/register">Register</NavLink>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

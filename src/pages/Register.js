@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-const Login = () => {
+const Register = () => {
   return (
     <Container>
       <Row xs={1} md={1} lg={2} className="justify-content-center">
@@ -17,7 +17,7 @@ const Login = () => {
         </Col> */}
         <Col>
           <Form className="login-form p-5">
-            <h3>Login to your account</h3>
+            <h3>Create a free account</h3>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
@@ -77,4 +77,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
