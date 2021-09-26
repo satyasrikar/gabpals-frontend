@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { useHistory } from "react-router";
 
 const Login = () => {
+  const history = useHistory();
   return (
     <Container>
       <Row xs={1} md={1} lg={2} className="justify-content-center">
@@ -21,9 +23,6 @@ const Login = () => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -66,6 +65,10 @@ const Login = () => {
                 type="submit"
                 // style={{ paddingInline: "1rem" }}
                 className="px-3"
+                onClick={(e) => {
+                  e.preventDefault();
+                  history.push("/dashboard");
+                }}
               >
                 Login
               </Button>

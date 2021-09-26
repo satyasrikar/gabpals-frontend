@@ -17,19 +17,62 @@ const Register = () => {
         </Col> */}
         <Col>
           <Form className="login-form p-5">
-            <h3>Create a free account</h3>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
+            <Row>
+              <h3>Create a free account</h3>
+            </Row>
+            <Row>
+              <Col xs="8">
+                <Form.Group className="mb-3" controlId="formBasicUsername">
+                  <Form.Control
+                    type="username"
+                    placeholder="Choose unique username"
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                    }}
+                  />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Button variant="secondary"> Check availibility</Button>
+              </Col>
+            </Row>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
+            <Row>
+              <Col>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control type="email" placeholder="Enter email" />
+                  <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text>
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" controlId="formBasicPhone">
+                  <Form.Label>Phone</Form.Label>
+                  <Form.Control
+                    type="number"
+                    placeholder="Enter phone number"
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Re-enter Password</Form.Label>
+                  <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
+              </Col>
+            </Row>
+
             <div
               style={{
                 display: "flex",
@@ -44,14 +87,11 @@ const Register = () => {
                       type="checkbox"
                       id={`inline-checkbox`}
                       inline
-                      label="Remember me"
+                      label="I agree to the Terms and Conditions"
                       name="type"
                     />
                   </div>
                 </Form.Group>
-              </div>
-              <div>
-                <p>Forgot password?</p>
               </div>
             </div>
 
@@ -67,7 +107,7 @@ const Register = () => {
                 // style={{ paddingInline: "1rem" }}
                 className="px-3"
               >
-                Login
+                Create account
               </Button>
             </div>
           </Form>{" "}
