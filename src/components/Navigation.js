@@ -38,10 +38,22 @@ const Navigation = () => {
           <Nav>
             <Nav.Link>Buy Coins</Nav.Link>
             <Nav.Link eventKey={2}>
-              <NavLink to="/login">Login</NavLink>
+              <NavLink
+                className="navLink"
+                activeClassName="activeLink"
+                to="/login"
+              >
+                Login
+              </NavLink>
             </Nav.Link>
             <Nav.Link eventKey={3}>
-              <NavLink to="/register">Register</NavLink>
+              <NavLink
+                className="navLink"
+                activeClassName="activeLink"
+                to="/register"
+              >
+                Register
+              </NavLink>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
